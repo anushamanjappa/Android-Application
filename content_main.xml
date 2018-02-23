@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/quit_date"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.anuas.smokingapplication.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="125dp"
+        android:text="Compute Your Health Statistics"
+        android:textSize="4mm"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.115"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/years"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/cigarCount"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="68dp"
+        android:text="Number of Years Smoked"
+        android:textColor="#000000"
+        android:textSize="3mm"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.115" />
+
+    <TextView
+        android:id="@+id/years"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="156dp"
+        android:text="Cigarettes Smoked per Day"
+        android:textColor="#000000"
+        android:textSize="3mm"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.115" />
+
+    <TextView
+        android:id="@+id/cigarCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/years"
+        android:layout_toEndOf="@+id/textView"
+        android:layout_toRightOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/cigarettes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/cigarCount"
+        android:layout_alignBottom="@+id/cigarCount"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="26dp"
+        android:layout_marginRight="26dp"
+        android:ems="4"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/cost_perpack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/cigarettes"
+        android:layout_marginTop="37dp"
+        android:text="Cost of each Cigarette"
+        android:textColor="#000000"
+        android:textSize="3mm"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/cost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/cigarettes"
+        android:layout_alignLeft="@+id/cigarettes"
+        android:layout_alignRight="@+id/cigarettes"
+        android:layout_alignStart="@+id/cigarettes"
+        android:layout_below="@+id/cigarettes"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/quit_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cost"
+        android:layout_marginTop="31dp"
+        android:text="Target Quit Date"
+        android:textSize="3mm"
+        android:textColor="#000000"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/quitDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/cost"
+        android:layout_alignLeft="@+id/cost"
+        android:layout_alignRight="@+id/cost"
+        android:layout_alignStart="@+id/cost"
+        android:layout_below="@+id/cost"
+        android:layout_marginTop="14dp"
+        android:ems="10"
+        android:inputType="date" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Compute Your Health Stats"
+        android:onClick="summary"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="14dp" />
+
+    <EditText
+        android:id="@+id/yearSmoked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/cigarettes"
+        android:layout_alignLeft="@+id/cigarettes"
+        android:layout_alignRight="@+id/cigarettes"
+        android:layout_alignStart="@+id/cigarettes"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="48dp"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        app:srcCompat="@drawable/stopsmoking"
+        android:layout_marginBottom="39dp"
+        android:layout_above="@+id/years"
+        android:layout_alignRight="@+id/cigarCount"
+        android:layout_alignEnd="@+id/cigarCount" />
+
+</RelativeLayout>
